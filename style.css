@@ -1,4 +1,23 @@
 .container {
     display: flex;
+    margin: auto;
+    align-items: stretch;
     justify-content: center;
+    flex-direction: column;
+    width: 800px;
+    height: 800px;
+    border: solid;
+    border-width: 1px;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+}
+
+.pixel {
+    display:flex;
+    flex-grow: 1;
+    border: solid;
+    border-width: 1px;
 }
