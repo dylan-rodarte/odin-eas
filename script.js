@@ -20,6 +20,9 @@ function createRow(dimension){
     for (let j = 0; j < dimension; j++){
         const pixel = document.createElement("div");
         pixel.className = "pixel";
+        pixel.addEventListener("click", () =>{
+            pixel.style.backgroundColor = "black";
+        })
         pixel.textContent = (j+1);
         row.appendChild(pixel);
     }
