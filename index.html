@@ -8,9 +8,13 @@
         <script src="script.js" defer></script> <!--Links to external Javascript-->
     </head>
 
-    <body onload="createGrid(16)"> <!--What visitors to site actually see-->
+    <body onload="createGrid(16);createSelectionGrid()"> <!--What visitors to site actually see-->
         <h1>Header</h1>
-        <button class="clearBtn">Clear Grid</button>
+        <div class="gridSelector">
+            <label for="gridSize">Select a Grid Size:</label>
+            <select name="sizes" id="gridSize"></select>
+        </div>
+        <button class="clearBtn">Create New Grid</button>
         <div class="container">
 
         </div>

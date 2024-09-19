@@ -31,3 +31,9 @@
     border-color: #888;
     border-style: solid;
 }
+
+.gridSelector {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}

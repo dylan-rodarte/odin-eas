@@ -1,10 +1,11 @@
 const container = document.querySelector(".container");
 const clearButton = document.querySelector(".clearBtn");
+const selectGrid = document.querySelector("#gridSize");
 
 
 clearButton.addEventListener("click", () =>{
     container.replaceChildren();
-    createGrid(10);
+    createGrid(selectGrid.value);
 })
 
 
@@ -23,8 +24,20 @@ function createRow(dimension){
         pixel.addEventListener("click", () =>{
             pixel.style.backgroundColor = "black";
         })
-        pixel.textContent = (j+1);
+        pixel.addEventListener("dblclick", () =>{
+            pixel.style.backgroundColor = "white";
+        })
+        //pixel.textContent = (j+1);
         row.appendChild(pixel);
     }
     container.appendChild(row);
+}
+
+function createSelectionGrid(){
+    for (let i = 1; i < 101; i++){
+        const option = document.createElement("option");
+        option.value = i;
+        option.text = `${i}`;
+        selectGrid.appendChild(option);
+    }
 }
